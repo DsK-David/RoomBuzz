@@ -1,8 +1,6 @@
 # Chatapp
-Just a simple app chat to learn how socket.io works
+Just a simple app chat 
 
-# Heroku app
-Chat is hosted in Heroku and available in https://pezzetti-chat-app.herokuapp.com/
 
 ## :rocket: Technologies
 
