@@ -1,4 +1,4 @@
-# Chatapp
+# RoomBuzz
 Just a simple app chat 
 
 
