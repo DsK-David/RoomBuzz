@@ -3,18 +3,20 @@
     <head>
         <title>RoomBuzz</title>
         <link rel="icon" href="/img/favi.png">
-        <link rel="stylesheet" href="/css/styles.min.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <body>
         <div class="centered-form">
             <div class="centered-form__box">
-                <h1>Join in room</h1>
+                <h1 class="room-title">RoomBuzz</h1>
                 <form action="/chat.html">
-                    <label>Display name</label>
-                    <input type="text" name="username" placeholder="Your username" required>
-                    <label>Room</label>
-                    <input type="text" name="room" placeholder="Create room or join in other" required>
-                    <button>Join</button>
+                    <label>Digite seu nome *</label>
+                    <input type="text" name="username" placeholder="Seu nome de Usuario" required>
+                    <label>Sala *</label>
+                    <input type="text" name="room" placeholder="Crie uma sala ou entre numa" required>
+                    <button class="room-button">Entrar</button>
                 </form>
             </div>
         </div>

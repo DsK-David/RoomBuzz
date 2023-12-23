@@ -22,6 +22,8 @@ body {
 
 h1 {
     margin-bottom: 16px;
+    color: #fff;
+    text-align: center;
 }
 
 label {
@@ -40,7 +42,7 @@ input {
 button {
     cursor: pointer;
     padding: 12px;
-    background: #7C5CBF;
+    background: #5ABC8D;
     border: none;
     color: white;
     font-size: 16px;
@@ -48,18 +50,18 @@ button {
 }
 
 button:hover {
-    background: #6b47b8;
+    background: #0c82d7;
 }
 
 button:disabled {
     cursor: default;
-    background: #7c5cbf94;
+    background: #0c82d7;
 }
 
 /* Join Page Styles */
 
 .centered-form {
-    background: #333744;
+    background: #2D3152;
     width: 100vw;
     height: 100vh;   
     display: flex;
@@ -71,7 +73,8 @@ button:disabled {
     box-shadow: 0px 0px 17px 1px #1D1F26;
     background: #F7F7FA;
     padding: 24px;
-    width: 250px;
+    width: 50%;
+    height: 60%;
 }
 
 .centered-form button {
@@ -87,12 +90,14 @@ button:disabled {
 
 .chat {
     display: flex;
+    height: 100vh;
+    background: #2D3152;
 }
 
 .chat__sidebar {
     height: 100vh;
     color: white;
-    background: #333744;
+    background: #181a2c;
     width: 225px;
     overflow-y: scroll
 }
@@ -103,19 +108,37 @@ button:disabled {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
+    height: 100h;
+}
+.back_button{
+    width: 45px;
+    border-radius: 24px;
+    padding: 9px;
+    margin: 10px;
+
 }
 
 .chat__messages {
-    flex-grow: 1;
+   flex-grow: 1;
     padding: 24px 24px 0 24px;
     overflow-y: scroll;
+    max-height: 100vh;
+    color: #fff;
+ 
 }
 
 /* Message Styles */
 
 .message {
-    margin-bottom: 16px;   
+    margin-bottom: 16px;  
+    background: #5ABC8D;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+}
+.message span{
+    color: #F7F7FA;
 }
 
 .message__name {
@@ -128,7 +151,9 @@ button:disabled {
     color: #777;
     font-size: 14px;
 }
-
+.message p{
+    margin: 10px;
+}
 .message a {
     color: #0070CC;
 }
@@ -149,12 +174,15 @@ button:disabled {
 }
 
 .compose input {
-    border: 1px solid #eeeeee;
     width: 100%;
     padding: 12px;
     margin: 0 16px 0 0;
     flex-grow: 1;
+    width: calc(100% - 60px);
+    border-radius: 5px;
 }
+
+
 
 .compose button {
     font-size: 14px;
@@ -165,7 +193,7 @@ button:disabled {
 .room-title {
     font-weight: 400;
     font-size: 22px;
-    background: #2c2f3a;
+    background: #5ABC8D;
     padding: 24px;   
 }
 
@@ -180,4 +208,51 @@ button:disabled {
     list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
+}
+ /* Regras de mídia para telas menores */
+ @media screen  and (max-width:768px){
+    .centered-form__box{
+      width: 100vh;
+    }
+    .chat__sidebar{
+      display: none;
+    }
+    .chat__main{
+      width: 100%;
+    }
+    .compose{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 10px); /* Ajuste conforme necessário */
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+    
+  }
+  @media screen  and (max-width:320px){
+    
+    .centered-form__box{
+      width: 30vh;
+
+    }
+    .chat__sidebar{
+      display: none;
+    }
+    .chat__main{
+      width: 80%;
+    }
+  }
+@media screen and (max-width:1280px) {
+  .compose input{
+    width: 80%;
+  }
+  .chat__sidebar{
+    display: none;
+  }
+  .centered-form__box{
+    height: 70%;
+  }
+  
 }

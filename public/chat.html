@@ -4,16 +4,19 @@
 <head>
     <title>RoomBuzz</title>
     <link rel="icon" href="/img/favi.png">
-    <link rel="stylesheet" href="/css/styles.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+   
     <div class="chat">
         <div id="sidebar" class="chat__sidebar">
 
         </div>
         <div class="chat__main">
+            <button onclick="back()" class="back_button"><i class='bx bx-arrow-back'></i></button>
             <div id="messages" class="chat__messages"></div>
 
             <div class="compose">
@@ -25,6 +28,11 @@
             </div>
         </div>
     </div>
+    <script>
+        function back(){
+            location.href='/'
+        }
+    </script>
 
     <script id="message-template" type="text/html">
             <div class="message">

@@ -5,7 +5,6 @@ const socketio = require('socket.io');
 const Filter = require('bad-words');
 const { generateMessage, generateLocationMessage } = require('./utils/messages');
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./utils/users');
-
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
@@ -21,6 +20,7 @@ const chatMessages = {};
 // Objeto para armazenar as salas de cada usuário
 const userRooms = {};
 
+
 io.on('connection', (socket) => {
     console.log(`${socket.id}`);
 
@@ -30,6 +30,7 @@ io.on('connection', (socket) => {
         if (error) {
             return callback(error);
         }
+     
 
         socket.join(user.room);
 
@@ -46,6 +47,7 @@ io.on('connection', (socket) => {
             chatMessages[user.room].forEach((message) => {
                 socket.emit('message', message);
             });
+            callback();
         }
 
         // Enviar a lista de salas para o usuário

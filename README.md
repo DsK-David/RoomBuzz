@@ -1,22 +1,19 @@
 # RoomBuzz
-Just a simple app chat 
-
+RoomBuzz um sistema de mensagens simples direto,feito para facilitar mensagens de grupos e privadas.
 
 ## :rocket: Technologies
 
-This project uses :
+Este projeto usa :
 
 - [Node.js](https://nodejs.org/en/)
 - [Socket.io](https://github.com/socketio/socket.io)
 - [Mustache](https://github.com/janl/mustache.js)
 
-# Installation and Usage
+# Instalar e usar 
 ```bash
     npm install
     npm run dev
 ```
-Web site will be available in http://localhost:3000
+O projeto vai rodar no link http://localhost:3000
 
-Open multiple browsers, add an username and room name 
-
-Start chatting !
+esteje avontade para contribuir
